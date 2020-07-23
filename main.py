@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
-# Tried to make some encodings like the SHA-1 encryption or "just like that" stuff
+# Tried to make some random bunch of characters like the SHA-1 encryption or "just like that" stuff
 import random, os
-os.system("clear")
+os.system("clear") # clears the console and prints text on screen
 
 # 1
 lower_alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -15,7 +15,7 @@ while len(used_char) < 40:
     upper_alph, symbol = upper_alpha[random.randint(0, 25)], symbols[random.randint(0, 3)]
     used_char.add(number); used_char.add(lower_alph); used_char.add(upper_alph); used_char.add(symbol)
 
-if len(used_char) > 40:
+if len(used_char) > 40: # check for any extra character which may cause the string to be greater than specified length 40
     while len(used_char) != 40:
         used_char.pop()
-print("".join(used_char), len(used_char))
+print("".join(used_char))
